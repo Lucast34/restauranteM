@@ -27,9 +27,9 @@ O sistema deve armazenar as seguintes informações:
   
 **Avaliação**  
 Você deve criar um banco de dados relacional para armazenar essas informações e desenvolver os comandos SQL necessários para:  
-- [ ] Criar o modelo conceitual (DER-Conceitual).  
-- [ ] Criar o modelo lógico (DER-Lógico).  
-- [ ] Criar o banco e as tabelas seguindo a modelagem proposta (DDL).  
+- [x] Criar o modelo conceitual (DER-Conceitual).  
+- [x] Criar o modelo lógico (DER-Lógico).  
+- [x] Criar o banco e as tabelas seguindo a modelagem proposta (DDL).  
 - [ ] Inserir dados no banco representando diferentes cenários de comandas e pedidos (DML).    
 - [ ] Relatório (SQL - SELECT) para extrair informações importantes do banco (DQL), como:  
 	- Listar todas as comandas abertas.  
