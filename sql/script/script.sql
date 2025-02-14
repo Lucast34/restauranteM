@@ -27,11 +27,15 @@ select * from Pedido;
 create table Cardapio (
     id_cardapio serial primary key,
     nome varchar(250),
+<<<<<<< HEAD
     descricao text,
+=======
+>>>>>>> 30bcff4d8863a4a3c5fddd5bddd07440ca6e2c30
     preco float,
     estoque int
 );
 
+<<<<<<< HEAD
 select  * from cardapio c ;
 
 drop table comanda;
@@ -39,3 +43,6 @@ drop table pedido;
 drop table cardapio cascade;
 
 select * from Cardapio c;
+=======
+select * from Cardapio c;
+>>>>>>> 30bcff4d8863a4a3c5fddd5bddd07440ca6e2c30
