@@ -12,7 +12,6 @@ select * from Comanda;
 create table Pedido(
 	id_pedido serial primary key,
 	pedido_dt_hr timestamp,
-	pratos int,
 	id_comandaPedido int,
 	id_cardapaioPedido int,
 	
@@ -36,5 +35,8 @@ drop table comanda cascade;
 drop table pedido;
 drop table cardapio cascade;
 
+ALTER TABLE pedido DROP column pratos;
+
 select * from Cardapio c;
 select * from Cardapio c;
+select * from comanda; 
