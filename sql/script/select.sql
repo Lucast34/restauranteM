@@ -64,11 +64,9 @@ call at_estoque(15,7);
 
 -- trigger
 
-CREATE TRIGGER trigger_atualizar_estoque
-AFTER INSERT ON Pedido
-FOR EACH ROW
-EXECUTE FUNCTION( 
-  BEGIN
+CREATE OR REPLACE FUNCTION atualizar_estoque_pedido()
+RETURNS TRIGGER AS $$
+BEGIN
     -- Atualiza o estoque do cardápio, diminuindo pela quantidade do pedido
     UPDATE Cardapio
     SET estoque = estoque - NEW.quantidade
@@ -76,5 +74,16 @@ EXECUTE FUNCTION(
 
     -- Retorna o novo registro para completar o INSERT
     RETURN NEW;
-  END;
-);
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_atualizar_estoque
+AFTER INSERT ON Pedido
+FOR EACH ROW
+EXECUTE FUNCTION atualizar_estoque_pedido();
+
+select * from cardapio c ;
+
+insert into pedido(pedido_dt_hr,quantidade,id_comandapedido ,id_cardapaiopedido)
+values
+  ('2025-02-13 19:00:00',10, 1,7);
