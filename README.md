@@ -39,4 +39,4 @@ Você deve criar um banco de dados relacional para armazenar essas informações
 	- ~~Calcular o total gasto por cada comanda~~.  
 	- ~~Implemente uma consulta SQL para identificar qual prato foi o mais pedido e quantas vezes ele foi solicitado~~.  
 - [x] Criar uma procedure que atualize a quantidade em estoque de um item do cardápio.  
-- [ ] Criar uma trigger que subtraia a quantidade em estoque de um tem do cardápio quando for solicitado em um pedido.
+- [x] Criar uma trigger que subtraia a quantidade em estoque de um tem do cardápio quando for solicitado em um pedido.
