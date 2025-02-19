@@ -12,6 +12,7 @@ select * from Comanda;
 create table Pedido(
 	id_pedido serial primary key,
 	pedido_dt_hr timestamp,
+	quantidade int,
 	id_comandaPedido int,
 	id_cardapaioPedido int,
 	
